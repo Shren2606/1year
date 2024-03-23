@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="drag-container">
+        <div id="spin-container">  
+            <p>My Love</p>
+        </div>
+        <div id="ground"></div>
+      </div>
+      <script>
+        // Mảng chứa các đường dẫn ảnh
+        var imageUrls = [
+            "img/img1.jpg",
+            "img/img2.jpg",
+            "img/img3.jpg",
+            "img/img4.jpg",
+            "img/img5.jpg",
+            "img/img6.jpg",
+            "img/img7.jpg"
+        ];
+    
+        // Lặp qua mỗi đường dẫn ảnh và tạo thẻ <img> tương ứng
+        imageUrls.forEach(function(url) {
+            // Tạo một thẻ <img> mới
+            var img = document.createElement("img");
+            // Đặt thuộc tính src cho thẻ <img> để chỉ đến đường dẫn ảnh
+            img.src = url;
+            // Đặt thuộc tính alt cho thẻ <img>
+            img.alt = "";
+            // Chèn thẻ <img> vào trong phần tử có id là "spin-container"
+            document.getElementById("spin-container").appendChild(img);
+        });
+    </script>
+      
+      <div id="music-container"></div>
+      <div id="canva">
+      <canvas id="canvas"></canvas>
+    </div>
+    <audio src="./music.mp3" autoplay loop></audio>
+    <script src="main.js"></script>
+    <script type="text/javascript" src="phaohoa.js"></script>
+</body>
+</html>
